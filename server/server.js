@@ -11,7 +11,12 @@ const app = express();
 
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://sinkedin-2.onrender.com",
+    credentials: true
+  })
+);
 app.use(express.json());
 
 
@@ -33,7 +38,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 // Server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
