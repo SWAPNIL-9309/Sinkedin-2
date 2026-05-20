@@ -32,9 +32,7 @@ function Home() {
 
     <div className="min-h-screen bg-black text-white p-10">
       <Navbar />
-      <h1 className="text-5xl font-bold mb-10">
-        SinkedIn
-      </h1>
+      
 
       {
         posts.map((post) => (
