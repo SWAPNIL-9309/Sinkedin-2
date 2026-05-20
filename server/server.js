@@ -13,7 +13,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "https://sinkedin-2.onrender.com",
+    origin: "https://sinkedin-2.vercel.app",
     credentials: true
   })
 );
